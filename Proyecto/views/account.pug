@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    p.texto Login
+    div.login
+        form(action="/users/update" method="post")
+            input.username(type="text" name="username" required placeholder="Usuario" value=user.username)
+            input.password(type="password" name="password" required placeholder="Password" value=)
+            input(type="text" name="email" required placeholder="Email" value=user.email)
+            button.btnsubmit(type="submit") Guardar cambios
+        if user.state == 'Pagado'
+            p Usted cuenta con una membresia VIP de por vida
+        else
+            p Para poder ver todo el contenido debe pagar su membresia de pago unico
+            a(href="/payment") Pagar

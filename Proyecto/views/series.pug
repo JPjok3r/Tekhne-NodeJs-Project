@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    section#series.series
+        each serie in files
+            div(class="seriebanners")
+                a(href="/series/" + serie.id)
+                    img#series(src="/images/" + serie.name + ".jpg", alt= serie.name)
+                br
+                label#nameserie= serie.name

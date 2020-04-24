@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    section#peliculas.peliculas
+        each pelicula in pelis
+            div(class="moviebanners")
+                a(href="/peliculas/" + pelicula.id)
+                    img#pelis(src="/images/" + pelicula.name + ".jpg", alt= pelicula.name)
+                br
+                label#namepeli= pelicula.name

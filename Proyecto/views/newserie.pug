@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    form#newserie.form-newserie(action="/admin/newserie" method="post")
+        div
+            label Nombre:
+            input#name.name(type="text" name="name" placeholder="Ingrese nombre de la serie")
+        div
+            label Descripcion:
+            input#desc.desc(type="text" name="desc" placeholder="Ingrese una descripcion de la serie")
+        div
+            label Categoria:
+            input#cat.cat(type="text" name="cat" placeholder="Ingrese la categoria de la serie")
+        div
+            label Directorio:
+            input#dir.dir(type="text" name="dir" placeholder="Ingrese la ruta en que se encuentra el archivo")
+        div
+            label Extension:
+            input#ext.ext(type="text" name="ext" placeholder="Ingrese la extension del archivo, ej: mkv, mp4")
+        div
+            label Temporada:
+            input#ext.ext(type="text" name="temporada" placeholder="A que temporada pertenece el capitulo")
+        div
+            label Episodio:
+            input#ext.ext(type="text" name="epi" placeholder="Que numero de capitulo es")
+        button(type="submit") Guardar Serie

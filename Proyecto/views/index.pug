@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    section#peliculas.peliculas
+        each pelicula in pelis
+            div(class="moviebanners")
+                a(href="/peliculas/" + pelicula.id)
+                    img#pelis(src="/images/" + pelicula.name + ".jpg", alt= pelicula.name)
+                br
+                label#namepeli= pelicula.name
+    br
+    br
+    section#series.series
+        each ser in serie
+            div(class="seriebanners")
+                a(href="/series/" + ser.id)
+                    img#series(src="/images/" + ser.name + ".jpg", alt= ser.name)
+                br
+                label#nameserie= ser.name
+  

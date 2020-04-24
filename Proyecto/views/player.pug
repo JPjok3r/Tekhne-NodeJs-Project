@@ -1,0 +1,16 @@
+doctype html
+
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div.videoplayer
+      video#vidplayer(controls autoplay)
+        if file.season
+          source(src=file.path_dir + file.name + file.season + file.episode + "." + file.extension)
+        else
+          source(src=file.path_dir + file.name + "." + file.extension)
+          track(src=file.path_dir + file.name + ".srt" kind="subtitles")
+
+        

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    p.text Pagar $50 Membresia de por vida
+    div.payment
+        form#payment.payment(action="/payment/" + user.id method="post")
+            div
+                label Card Number:
+                input#cardnum.cardnum(type="text" name="cardnum" placeholder="Numero de tarjeta")
+            div
+                label Card Holder:
+                input#cardhold.cardhold(type="text" name="cardhold" placeholder="Tarjeta perteneciente a?")
+            div
+                label Expiration Date:
+                input#expm.expm(type="text" name="expm")
+                input#expy.expy(type="text" name="expy")
+            div
+                label CCV:
+                input#ccv.ccv(type="text" name="ccv" placeholder="CCV")
+            button(type="submit") Pagar

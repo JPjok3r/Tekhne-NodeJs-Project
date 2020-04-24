@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    p.texto Signup
+    div.login
+        form(action="/users/signup" method="post")
+            input.username(type="text" name="username" required placeholder="Usuario")
+            input.password(type="password" name="password" required placeholder="Password")
+            input(type="text" name="email" required placeholder="Email")
+            button.btnsubmit(type="submit") SIGNUP
+        p Have an account already?
+            br
+            a(href="/users/login") Login here

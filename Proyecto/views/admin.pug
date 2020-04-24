@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    if creation
+        p= creation
+    a#btnnewm(href="/admin/newmovie")
+        button New movie
+    a#btnnews(href="/admin/newserie")
+        button New serie

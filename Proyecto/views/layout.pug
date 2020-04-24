@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      section(class="busqueda")
+        form(action="", method="")
+          input(type="search", name="buscar", placeholder="Buscar...")
+          button Buscar
+      div(id="menubar", class="menu_barnav")
+        a(href="/")
+          img(id="logo", class="menulogo", src="/images/StarStreams logo.png", alt="Video Streaming")
+        
+        ul(class="menu_navbar_menu")
+          li
+            a(href="/users/account") Cuenta
+          li
+            a(href="/series") Series
+          li
+            a(href="/peliculas") Peliculas
+            
+    main
+      block content
+    
+    footer
+      div(class="social-media")
+        p &copy; 2020
+        p Redes Sociales

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    p.texto Login
+    div.login
+        form(action="/admin/signup" method="post")
+            input.username(type="text" name="username" required placeholder="Usuario")
+            input.password(type="password" name="password" required placeholder="Password")
+            button.btnsubmit(type="submit") SIGNUP
+        p Have an account already?
+            br
+            a(href="/admin/login") Login here
